@@ -1,0 +1,21 @@
+
+        {% for todo in todos_uc %}
+            <li>
+
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-prepend">
+
+                        <button class="btn  btn-success"  id="completed_check" data-url="{% url 'todo:complete_event' todo.pk %}"><i class="fas fa-check"></i> </button>
+                       </div>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Text input with checkbox" readonly value="{{ todo.event }}" >
+                </div>
+
+            &nbsp;
+            </li>
+        {% empty %}
+            <div class="alert alert-info" role="alert">
+                <strong>Add a Task!</strong> You've have'nt added any tasks.
+            </div>
+        {% endfor %}

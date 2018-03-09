@@ -1,0 +1,10 @@
+
+    {% for todo in todos_c %}
+        {% if todo.is_completed is True %}
+        <li>{{ todo.event }} <button class="remove-item btn btn-danger btn-sm float-right" id="btn-delete" data-url="{% url 'todo:delete_event' todo.pk  %}"><i class="fas fa-trash" style="color:white;"></i></button></li>
+        {% endif %}
+    {% empty %}
+        <div class="alert alert-warning" role="alert">
+            <strong>Heads up!</strong> You've have'nt completed any Tasks.
+        </div>
+    {% endfor %}

@@ -1,0 +1,11 @@
+             <div class="todo-form">
+                    <form method="post" id="post-form">
+                        {% csrf_token %}
+                     <div class="input-group">
+                        <input type="text" class="form-control" id="todo-input" name="todo-input-text" placeholder="Add todo">
+                           <div class="input-group-append">
+                               <button type="submit" class="btn btn-success"><i class="fas fa-plus"></i> </button>
+                        </div>
+                      </div>
+                    </form>
+             </div>
